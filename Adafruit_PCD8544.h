@@ -29,6 +29,8 @@
 #include "pins_arduino.h"
 #endif
 
+#include <renderer.h>
+
 #include <Adafruit_GFX.h>
 #include <SPI.h>
 
@@ -83,7 +85,7 @@ typedef uint32_t PortMask;         ///< PortMask for other chips
 /*!
     @brief The PCD8544 LCD class
  */
-class Adafruit_PCD8544 : public Adafruit_GFX {
+class Adafruit_PCD8544 : public Renderer {
 public:
   Adafruit_PCD8544(int8_t SCLK, int8_t DIN, int8_t DC, int8_t CS, int8_t RST);
   Adafruit_PCD8544(int8_t SCLK, int8_t DIN, int8_t DC, int8_t RST);
